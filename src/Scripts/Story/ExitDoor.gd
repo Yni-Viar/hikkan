@@ -20,7 +20,7 @@ func interact(player: Node3D):
 				get_parent().get_parent().get_node("Blip").play("default")
 		4:
 			if !day_4_go_out:
-				if get_tree().root.get_node("Game").rng.randi_range(0, 32) == 13:
+				if get_tree().root.get_node("Game").rng.randi_range(0, 16) == 13 && OS.get_name() != "Web":
 					Settings.loader("res://Scenes/Dreamcore.tscn", {})
 				else:
 					get_tree().root.get_node("Game/StoryController").start_cutscene(3)

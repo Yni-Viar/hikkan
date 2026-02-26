@@ -12,6 +12,8 @@ var loading: bool = false
 func _ready() -> void:
 	if file_path_to_load.contains("res://"):
 		await get_tree().create_timer(0.375).timeout
+		var old_scene = get_tree().current_scene
+		old_scene.queue_free()
 		ResourceLoader.load_threaded_request(file_path_to_load, "", false, ResourceLoader.CACHE_MODE_IGNORE_DEEP)
 		loading = true
 		show()
@@ -38,7 +40,5 @@ func _process(delta: float) -> void:
 				call_deferred("load_complete", game)
 
 func load_complete(scene: Node):
-	var old_scene = get_tree().current_scene
 	Settings.override_main_scene(scene)
-	old_scene.queue_free()
 	queue_free()
