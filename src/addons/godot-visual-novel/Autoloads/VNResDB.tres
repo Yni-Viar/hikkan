@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="VNResDB" load_steps=16 format=3 uid="uid://ba51ghec3d4g8"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="1_rjiaa"]
+[ext_resource type="Resource" uid="uid://cos1yr2xulahb" path="res://addons/godot-visual-novel/Backgrounds/empty.tres" id="2_dbkbf"]
+[ext_resource type="Script" uid="uid://8vqw6j8aqaek" path="res://addons/godot-visual-novel/Characters/Character.gd" id="2_swdyd"]
+[ext_resource type="Resource" uid="uid://n658ucyh2dnx" path="res://addons/godot-visual-novel/Backgrounds/day3_1.tres" id="3_5s16x"]
+[ext_resource type="Script" uid="uid://7sutwrsj14xy" path="res://addons/godot-visual-novel/Autoloads/ResDB.gd" id="3_07kp2"]
+[ext_resource type="Resource" uid="uid://dj87etgygvujv" path="res://addons/godot-visual-novel/Backgrounds/day3_2.tres" id="4_u8jpx"]
+[ext_resource type="Resource" uid="uid://c4301e0p5yug5" path="res://addons/godot-visual-novel/Backgrounds/day4_1.tres" id="5_tucpe"]
+[ext_resource type="Resource" uid="uid://bx63755c1xb7m" path="res://addons/godot-visual-novel/Backgrounds/day4_2.tres" id="6_xxwme"]
+[ext_resource type="Resource" uid="uid://bygg2jarxc825" path="res://addons/godot-visual-novel/Backgrounds/day4_3.tres" id="7_ycelq"]
+[ext_resource type="Resource" uid="uid://djb1sjx3m6fhc" path="res://addons/godot-visual-novel/Backgrounds/day5_ge.tres" id="8_nb1gf"]
+[ext_resource type="Resource" uid="uid://ds3a2xcg6fq6l" path="res://addons/godot-visual-novel/Characters/narrator.tres" id="10_f7i26"]
+[ext_resource type="Resource" uid="uid://da63arr88hxsm" path="res://addons/godot-visual-novel/Characters/You.tres" id="11_g08qr"]
+[ext_resource type="Resource" uid="uid://cuwo0e7sb8m07" path="res://addons/godot-visual-novel/Characters/Mother.tres" id="12_cqvvn"]
+[ext_resource type="Resource" uid="uid://ddeckpta0xlyx" path="res://addons/godot-visual-novel/Characters/Stranger.tres" id="13_gujjx"]
+[ext_resource type="Resource" uid="uid://dm37c3xe5jx0v" path="res://addons/godot-visual-novel/Characters/Voice.tres" id="14_4tn8n"]
+
+[resource]
+script = ExtResource("3_07kp2")
+characters = Dictionary[String, ExtResource("2_swdyd")]({
+"mother": ExtResource("12_cqvvn"),
+"narrator": ExtResource("10_f7i26"),
+"neighbour": ExtResource("13_gujjx"),
+"yenjeai_voice": ExtResource("14_4tn8n"),
+"you": ExtResource("11_g08qr")
+})
+backgrounds = Dictionary[String, ExtResource("1_rjiaa")]({
+"corridor": ExtResource("6_xxwme"),
+"corridor_good_ending": ExtResource("7_ycelq"),
+"door": ExtResource("3_5s16x"),
+"door_half_open": ExtResource("5_tucpe"),
+"door_half_open_eye": ExtResource("4_u8jpx"),
+"empty": ExtResource("2_dbkbf"),
+"good_ending": ExtResource("8_nb1gf")
+})
+metadata/_custom_type_script = "uid://7sutwrsj14xy"

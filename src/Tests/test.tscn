@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs53ghighs1sd"]
+
+[ext_resource type="Script" uid="uid://fdp04nwm4ffx" path="res://Tests/GeneratorTest.gd" id="1_6inc7"]
+[ext_resource type="Script" uid="uid://d6o5ridb5u5l" path="res://Scripts/HouseGen.gd" id="2_aseh6"]
+[ext_resource type="Resource" uid="uid://dwtphuyejefgh" path="res://Assets/HomeGenerator/GenericHome.tres" id="3_p0lcp"]
+
+[sub_resource type="Environment" id="Environment_6inc7"]
+
+[node name="Test" type="Node3D"]
+script = ExtResource("1_6inc7")
+
+[node name="HouseGenerator" type="Node3D" parent="."]
+script = ExtResource("2_aseh6")
+rooms = ExtResource("3_p0lcp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6inc7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 0, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.5877712, 0.80902725, 0, -0.80902725, -0.5877712, 0, 0, 0)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.70710677, -3.090862e-08, 0.70710677, -0.70710677, -3.090862e-08, 0.70710677, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.50000006, 3.7855184e-08, -0.8660255, 0.8660255, -2.1855694e-08, 0.50000006, 0, -1, -4.371139e-08, 0, 0, 0)

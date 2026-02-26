@@ -1,0 +1,15 @@
+background empty fade_in
+
+"Where am I?"
+
+yenjeai_voice "You are in my home dimension"
+
+"Why am I floating in the train?"
+
+yenjeai_voice "This train is... not real."
+yenjeai_voice "I just wanted to make this dimension more comfortable for you"
+yenjeai_voice "Your world is now paused, so don't worry about your mother."
+yenjeai_voice "I want a conversation with you"
+
+set day_4_secret_ending true
+transition fade_out

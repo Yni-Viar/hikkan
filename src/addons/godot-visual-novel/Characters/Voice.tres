@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://dm37c3xe5jx0v"]
+
+[ext_resource type="Script" uid="uid://8vqw6j8aqaek" path="res://addons/godot-visual-novel/Characters/Character.gd" id="1_ighey"]
+
+[resource]
+script = ExtResource("1_ighey")
+id = "yenjeai_voice"
+display_name = "Voice"
+bio = ""

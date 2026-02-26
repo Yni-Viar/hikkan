@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://cuwo0e7sb8m07"]
+
+[ext_resource type="Script" uid="uid://8vqw6j8aqaek" path="res://addons/godot-visual-novel/Characters/Character.gd" id="1_krp8g"]
+
+[resource]
+script = ExtResource("1_krp8g")
+id = "mother"
+display_name = "Your mother"
+bio = ""

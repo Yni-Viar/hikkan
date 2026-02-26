@@ -1,0 +1,18 @@
+background door fade_in
+
+"Do you REALLY want to open that door?"
+
+choice:
+	"YES":
+		transition fade_out_black
+		background door_half_open_eye fade_in
+		set day_3_good true
+		transition fade_out_black
+		background door fade_in
+		"But you cannot overwhelm your fear..."
+	"NO":
+		set day_3_good false
+
+transition fade_out_black
+background empty fade_in
+transition fade_out

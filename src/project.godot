@@ -1,0 +1,105 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Hikkan"
+config/description="The game about hikkikomori, who decides to get out."
+config/version="1.0.0"
+run/main_scene="uid://2t0g6kfccb5n"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Hikkan"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/image="uid://bwq036g61f5l4"
+config/icon="uid://nw7c2c72j0cl"
+
+[autoload]
+
+ResourceStorage="*res://Scripts/ResourceStorage.gd"
+Settings="*res://Scripts/Settings.gd"
+ResourceDB="*res://addons/godot-visual-novel/Autoloads/ResourceDB.gd"
+Variables="*res://addons/godot-visual-novel/Autoloads/Variables.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-visual-novel/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "orange",
+"res://PlayerScript/": "red",
+"res://Scenes/": "orange",
+"res://Scripts/": "green",
+"res://Shaders/": "green",
+"res://Sounds/": "purple",
+"res://Tests/": "gray",
+"res://UI/": "orange",
+"res://addons/": "pink"
+}
+
+[global_group]
+
+PlayerSpawn=""
+LaptopSpawn=""
+SofaSpawn=""
+ReflectionProbe=""
+
+[input]
+
+toggle_mode={
+"deadzone": 0.2,
+"events": []
+}
+camera_rotate_right={
+"deadzone": 0.2,
+"events": []
+}
+camera_rotate_left={
+"deadzone": 0.2,
+"events": []
+}
+click={
+"deadzone": 0.2,
+"events": []
+}
+look={
+"deadzone": 0.2,
+"events": []
+}
+vn_continue={
+"deadzone": 0.2,
+"events": []
+}
+
+[navigation]
+
+3d/default_link_connection_radius=1.675
+
+[physics]
+
+common/physics_ticks_per_second=30
+common/physics_jitter_fix=0.0
+3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
+rendering_device/stretch/mode="disabled"
+rendering_device/stretch/aspect="keep"

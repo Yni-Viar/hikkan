@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj7m0v1h5bbkp"]
+
+[ext_resource type="PackedScene" uid="uid://i0fu80mpsbo4" path="res://Assets/OriginalAssets/Table.tscn" id="1_pmhib"]
+
+[node name="SofaTableClutter" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_pmhib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5962363)
+
+[node name="sofaspawn" type="Marker3D" parent="." groups=["SofaSpawn"]]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.15915155, -0.6445718, 1.7228365)
+
+[node name="laptopspawn" type="Marker3D" parent="." groups=["LaptopSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62265587, -1.540393)

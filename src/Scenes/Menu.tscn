@@ -1,0 +1,217 @@
+[gd_scene load_steps=8 format=3 uid="uid://2t0g6kfccb5n"]
+
+[ext_resource type="Script" uid="uid://sjd4pgt5xg6w" path="res://Scripts/MainMenu.gd" id="1_syfuq"]
+[ext_resource type="FontFile" uid="uid://3ydmlj7unul" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="2_s2c3o"]
+[ext_resource type="Texture2D" uid="uid://uaybaxeqs3gf" path="res://addons/godot-visual-novel/Backgrounds/day3_1.png" id="2_wfhf6"]
+[ext_resource type="Texture2D" uid="uid://mit2qpvqyw1j" path="res://UI/playbutton.png" id="3_ma218"]
+[ext_resource type="Texture2D" uid="uid://cfo2xnb1yxbx0" path="res://UI/settings_button.png" id="4_idohh"]
+[ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="4_s2c3o"]
+[ext_resource type="PackedScene" uid="uid://bob8xgabev438" path="res://Scenes/Settings.tscn" id="6_wfhf6"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_syfuq")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wfhf6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.148
+anchor_right = 0.5
+anchor_bottom = 0.148
+offset_left = -320.0
+offset_top = -39.904
+offset_right = 320.0
+offset_bottom = 40.096
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_s2c3o")
+theme_override_font_sizes/font_size = 48
+text = "Hikkan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Seed" type="LineEdit" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.66
+anchor_right = 0.5
+anchor_bottom = 0.66
+offset_left = -192.0
+offset_top = -19.680023
+offset_right = 192.0
+offset_bottom = 20.319977
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Seed"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_ma218")
+texture_pressed = ExtResource("3_ma218")
+
+[node name="Settings" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_idohh")
+
+[node name="LawRegulation" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -184.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "CREDITS"
+
+[node name="CreditsContainer" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CreditsContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="BackButton" type="TextureButton" parent="CreditsContainer"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("4_s2c3o")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CreditsContainer"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Hikkan
+-
+A game made by Yni Viar in 2026"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Licensed under MIT License"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "-----------------------------------------
+Third-party credits
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Godot Engine + demo projects
+by it's contributors
+Licensed under MIT License
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Visual Novel system
+by GDQuest
+Licensed under MIT License
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Beetle bot 3D model
+by GDQuest
+Licensed under CC-BY 4.0
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Coming Soon font
+Licensed under
+Apache license 2.0
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" parent="." instance=ExtResource("6_wfhf6")]
+visible = false
+
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CreditsContainer/BackButton" to="." method="_on_back_button_pressed"]

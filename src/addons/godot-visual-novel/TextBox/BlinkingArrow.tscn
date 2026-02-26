@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnd4vluo674hr"]
+
+[ext_resource type="Texture2D" uid="uid://bw8bk4vud8j36" path="res://addons/godot-visual-novel/TextBox/arrow.png" id="1"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "New Anim"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlinkingArrow:offset_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [-64.0, -76.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ek8pv"]
+_data = {
+&"New Anim": SubResource("1")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 48.0
+mouse_filter = 2
+
+[node name="BlinkingArrow" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -48.0
+offset_right = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ek8pv")
+}
+autoplay = "New Anim"

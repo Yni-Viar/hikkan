@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://dj87etgygvujv"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="1_egdej"]
+[ext_resource type="Texture2D" uid="uid://buayqebdn7k5h" path="res://addons/godot-visual-novel/Backgrounds/day3_2.png" id="2_egdej"]
+
+[resource]
+script = ExtResource("1_egdej")
+id = "door_half_open_eye"
+display_name = "Door"
+texture = ExtResource("2_egdej")

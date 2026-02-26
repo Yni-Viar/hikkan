@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HouseGenZone" load_steps=6 format=3 uid="uid://dwtphuyejefgh"]
+
+[ext_resource type="PackedScene" uid="uid://2p2x8mj0dw7h" path="res://Assets/HomeGenerator/Doors/CenterDoor.tscn" id="1_t0u5i"]
+[ext_resource type="Material" uid="uid://rmp06fxgrnal" path="res://Assets/Materials/walls.tres" id="4_t0u5i"]
+[ext_resource type="PackedScene" uid="uid://be2y003243y5a" path="res://Assets/HomeGenerator/Rooms/GenericRoom.tscn" id="5_nwvws"]
+[ext_resource type="PackedScene" uid="uid://1ar7budlvyrp" path="res://Assets/HomeGenerator/Rooms/BKRoom.tscn" id="6_a8p7q"]
+[ext_resource type="Script" uid="uid://yhji48841qur" path="res://Scripts/HouseGenZone.gd" id="7_8t3qd"]
+
+[resource]
+script = ExtResource("7_8t3qd")
+rooms = Array[PackedScene]([ExtResource("5_nwvws")])
+rooms_single = Array[PackedScene]([ExtResource("6_a8p7q")])
+door_frames = Array[PackedScene]([ExtResource("1_t0u5i")])
+end_door_material = ExtResource("4_t0u5i")
+metadata/_custom_type_script = "uid://yhji48841qur"

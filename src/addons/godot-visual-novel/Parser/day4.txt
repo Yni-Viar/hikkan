@@ -1,0 +1,28 @@
+background door_half_open fade_in
+
+transition fade_out_black
+background corridor fade_in
+if day_3_good:
+	"I definitely try to get out..."
+
+	transition fade_out_black
+	background corridor_good_ending fade_in
+
+	neighbour "Good morning"
+
+	you "Good... morning..."
+
+	"You knew, that you cannot go out right now..."
+	"You still have a fear"
+
+	transition fade_out_black
+	background door fade_in
+	set day_4_good true
+else:
+	"No. I cannot..."
+
+	transition fade_out_black
+	background door fade_in
+	set day_4_good false
+
+transition fade_out

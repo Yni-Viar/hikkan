@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://n658ucyh2dnx"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="1_iiy6p"]
+[ext_resource type="Texture2D" uid="uid://uaybaxeqs3gf" path="res://addons/godot-visual-novel/Backgrounds/day3_1.png" id="2_iiy6p"]
+
+[resource]
+script = ExtResource("1_iiy6p")
+id = "door"
+display_name = "Door with light behind"
+texture = ExtResource("2_iiy6p")

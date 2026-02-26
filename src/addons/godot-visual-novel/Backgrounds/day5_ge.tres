@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://djb1sjx3m6fhc"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="1_ep7df"]
+[ext_resource type="Texture2D" uid="uid://cfjgfkalaw8f8" path="res://addons/godot-visual-novel/Backgrounds/day5_ge.png" id="2_ep7df"]
+
+[resource]
+script = ExtResource("1_ep7df")
+id = "good_ending"
+display_name = "You finally went out"
+texture = ExtResource("2_ep7df")

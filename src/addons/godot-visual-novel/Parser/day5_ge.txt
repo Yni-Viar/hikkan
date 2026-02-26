@@ -1,0 +1,11 @@
+background door_half_open fade_in
+
+transition fade_out_black
+background corridor fade_in
+
+transition fade_out_black
+background good_ending fade_in
+
+"Having a walk is not so bad, as I seem earlier"
+
+transition fade_out

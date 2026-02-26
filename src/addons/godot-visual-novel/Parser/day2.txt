@@ -1,0 +1,21 @@
+background empty fade_in
+
+"...while sitting near PC, your mother wrote a message."
+"You started to read the message"
+mother "My dear son, please, go for a walk."
+mother "It is good for health!"
+
+choice:
+	"I'll try it, thanks!":
+		mother "Please, I hope for you."
+		mother "Maybe you'll find friends, since you have none of them."
+	"I just want to sit online...":
+		mother "Please, I beg you to go for a walk!"
+		mother "You will become ill more frequently."
+		choice:
+			"I believe you, I will try to go for a walk":
+				mother "I did not doubt in you."
+			"I am afraid to come out.":
+				mother "I am so sorry for you..."
+
+transition fade_out

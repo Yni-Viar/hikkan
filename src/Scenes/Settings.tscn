@@ -1,0 +1,160 @@
+[gd_scene load_steps=5 format=3 uid="uid://bob8xgabev438"]
+
+[ext_resource type="Theme" uid="uid://12sd2ksp1xfo" path="res://UITheme.tres" id="1_yrknh"]
+[ext_resource type="Script" uid="uid://k5gtewnuioi5" path="res://Scripts/BaseWindow.gd" id="2_w1nw0"]
+[ext_resource type="Script" uid="uid://djxcpq7gs1rgm" path="res://Scripts/SettingsUI.gd" id="3_mjqtt"]
+[ext_resource type="Script" uid="uid://fcnhva8wugy6" path="res://Scripts/KeybindSetter.gd" id="5_mjqtt"]
+
+[node name="Settings" type="Window"]
+auto_translate_mode = 1
+oversampling_override = 1.0
+title = "Settings"
+initial_position = 2
+size = Vector2i(800, 480)
+theme = ExtResource("1_yrknh")
+script = ExtResource("2_w1nw0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsUI" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(768, 0)
+layout_mode = 2
+script = ExtResource("3_mjqtt")
+
+[node name="GraphicsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "GRAPHICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Glow" type="CheckButton" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+button_pressed = true
+text = "Glow"
+
+[node name="BasicReflection" type="CheckButton" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+button_pressed = true
+text = "ReflectionProbe"
+
+[node name="SSAO" type="CheckButton" parent="ScrollContainer/SettingsUI"]
+visible = false
+layout_mode = 2
+text = "SSAO"
+
+[node name="SoundsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "SOUNDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="HBoxContainer" parent="ScrollContainer/SettingsUI"]
+visible = false
+custom_minimum_size = Vector2(768, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/SettingsUI/Music"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+text = "Music volume"
+
+[node name="MusicVolume" type="HSlider" parent="ScrollContainer/SettingsUI/Music"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="KeybindingLabel" type="Label" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "KEYBINDING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/SettingsUI"]
+custom_minimum_size = Vector2(768, 0)
+layout_mode = 2
+columns = 2
+script = ExtResource("5_mjqtt")
+
+[node name="CLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "Camera look"
+
+[node name="CLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="CLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "Click"
+
+[node name="CButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="CRLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+text = "Camera rotation left-side"
+
+[node name="CRLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="CRRLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+text = "Camera rotation right-side"
+
+[node name="CRRButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="TVMLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "Toggle view mode"
+
+[node name="TVMButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="VNLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "Visual novel: Continue"
+
+[node name="VNButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="ILabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+visible = false
+layout_mode = 2
+text = "INVENTORY"
+
+[node name="IButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="toggled" from="ScrollContainer/SettingsUI/Glow" to="ScrollContainer/SettingsUI" method="_on_glow_toggled"]
+[connection signal="toggled" from="ScrollContainer/SettingsUI/BasicReflection" to="ScrollContainer/SettingsUI" method="_on_basic_reflection_toggled"]
+[connection signal="toggled" from="ScrollContainer/SettingsUI/SSAO" to="ScrollContainer/SettingsUI" method="_on_ssao_toggled"]
+[connection signal="drag_ended" from="ScrollContainer/SettingsUI/Music/MusicVolume" to="ScrollContainer/SettingsUI" method="_on_music_volume_drag_ended"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CLButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_cl_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_c_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CRLButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_crl_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CRRButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_crr_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/TVMButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_tvm_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/VNButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_vn_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/IButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_i_button_pressed"]

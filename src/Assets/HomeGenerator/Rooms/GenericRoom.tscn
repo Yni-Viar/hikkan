@@ -1,0 +1,187 @@
+[gd_scene load_steps=11 format=4 uid="uid://be2y003243y5a"]
+
+[ext_resource type="Material" uid="uid://rmp06fxgrnal" path="res://Assets/Materials/walls.tres" id="1_8wobq"]
+[ext_resource type="Shader" uid="uid://gialf5m1nus5" path="res://Shaders/PBRGlassShader_CC0/pbr_glass.gdshader" id="1_rn8ah"]
+[ext_resource type="Script" uid="uid://buynp5seh4q8r" path="res://Scripts/RoomGen.gd" id="1_xtb5k"]
+[ext_resource type="Material" uid="uid://dxv6q2me5atev" path="res://Assets/Materials/wood_floor.tres" id="2_1i31o"]
+[ext_resource type="PackedScene" uid="uid://clwjf2jvymj1" path="res://Assets/ThirdPartyAssets/Lamp.tscn" id="4_1i31o"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_8wobq"]
+resource_local_to_scene = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dcx0o"]
+render_priority = 0
+shader = ExtResource("1_rn8ah")
+shader_parameter/albedo = Color(1, 1, 1, 0)
+shader_parameter/roughness = 0.15
+shader_parameter/normal_strength = 1.0
+shader_parameter/edge_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dbs3y"]
+_surfaces = [{
+"aabb": AABB(-2.3049998, -2.3049998, -2.3049998, 9.502165, 4.6099997, 4.6099997),
+"format": 34896613377,
+"index_count": 66,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAGAAUACAAJAAYACgAIAAUACgAFAAsACAAKAAwACAAMAA0ACQAIAA0ACgAOAAwACQANAA8ACgAQAA4AEAAPAA4AEAAKAAsAEAAJAA8ACQARAAYACQAQABEAEAALABEAEQALABIAEQASABMA"),
+"name": "Walls",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAvfAAAAAAAAHj8//8AAAAAePwAAAAAAAAvfP//AAAAAHj8o+QXPQAAePzUXhc9AAB4/KPk58IAAHj8/////wAA//+j5OfCAAD//6PkFz0AAP//1F7nwgAA///UXhc9AAB4/NRe58IAAHj8AAD//wAAL3z/////AAAvfAAA//8AAA==")
+}, {
+"aabb": AABB(-2.3049998, -2.3049998, -2.3049998, 9.37127, 1e-05, 4.6099997),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("630AAAAAAAD//wAA//8AAOt9AAD//wAA//8AAAAAAAAAAAAAAAAAAAAAAAD//wAA")
+}, {
+"aabb": AABB(-2.3049998, 2.3049998, -2.3049998, 9.37127, 1e-05, 4.6099997),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("630AAAAAAAAAAAAA//8AAOt9AAD//wAAAAAAAAAAAAD//wAAAAAAAP//AAD//wAA")
+}, {
+"aabb": AABB(7.1971645, -0.5973005, -1.2048222, 1e-05, 2.4096444, 2.4096444),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Window",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1i31o"]
+resource_name = "GenericRoom_Cube_001"
+_surfaces = [{
+"aabb": AABB(-2.3049998, -2.3049998, -2.3049998, 9.502165, 4.6099997, 4.6099997),
+"attribute_data": PackedByteArray("HYj/////r4P/////HYivg+Z8//+5+K+Dufj//+Z8///mfK+DufgvmiH8Kdsh/C+aufgp22Pj+JD///////+vg2Pj8tG5pPiQHYj//x2Ir4O5pPLRufjy0SH8+JAh/PLRufj4kLn4+JAh/PLRIfz4kLn48tG5+CnbIfwvmiH8Kdu5+C+aufj//+Z8r4PmfP//ufivgw=="),
+"format": 34896613399,
+"index_count": 66,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAIAAUACQAKAAsACQAMAAoADQAOAA8ADQAQAA4AEQANAA8AEAASAA4AEQAPABMAEAAUABIAFAARABMAFAATABIAFQAWABcAFQAYABYAGQAaABsAGQAcABoAHQAeAB8AHQAgAB4AIQAiACMAIQAkACIA"),
+"material": ExtResource("1_8wobq"),
+"name": "Walls",
+"primitive": 3,
+"uv_scale": Vector4(2.0249243, 1.95276, 0, 0),
+"vertex_count": 37,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//AAD/vwAAAAAAAP+/AAD//////78vfAAAAAAAgHj8//8AAACAePwAAAAAAIAvfAAAAAAAgC98//8AAACAePyj5Bc9/z///6Pk58L/P///o+QXPf8/ePyj5OfC/z94/KPkFz0AAHj8AAAAAAAAePz//wAAAAB4/NReFz0AAHj8o+TnwgAAePwAAP//AAB4/P////8AAHj81F7nwgAAePzUXhc9AID//6PkFz0AgP//1F4XPQCAePyj5Bc9AIB4/KPk58IAAP//1F7nwgAA//+j5OfCAAB4/NRe58IAAHj81F7nwv+////UXhc9/7///9Re58L/v3j81F4XPf+/ePwAAP//AAAvfP////8AAC98AAD//wAAePz/////AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//f////3////9/////f///////f////3////9/////f////3////9/////f////3////9/////f////3////9/")
+}, {
+"aabb": AABB(-2.3049998, -2.3049998, -2.3049998, 9.37127, 1e-05, 4.6099997),
+"attribute_data": PackedByteArray("c6Mog/////9zo///c6Mog///KIPcSSiDc6Mog9xJ//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAwAEAAEABQAGAAIABQACAAcA"),
+"material": ExtResource("2_1i31o"),
+"name": "Floor",
+"primitive": 3,
+"uv_scale": Vector4(2.7092967, 1.944516, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("630AAAAA/7///wAA////v+t9AAD///+/630AAAAA/7///wAAAAD/vwAAAAAAAP+/630AAAAA/78AAAAA////v////3////9/////f////3////9/////f////3////9/")
+}, {
+"aabb": AABB(-2.3049998, 2.3049998, -2.3049998, 9.37127, 1e-05, 4.6099997),
+"attribute_data": PackedByteArray("c6Mog9xJ//9zo///3Ekog///KIP/////c6P//w=="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAUABAAAAAYA"),
+"material": ExtResource("1_8wobq"),
+"name": "Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(2.7092967, 1.944516, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray("630AAAAA/z8AAAAA////P+t9AAD///8/AAAAAAAA/z///wAAAAD/P///AAD///8/630AAP///z8AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/")
+}, {
+"aabb": AABB(7.1971645, -0.5973005, -1.2048222, 1e-05, 2.4096444, 2.4096444),
+"attribute_data": PackedByteArray("QckHoF9KJSFfSgegQcklIQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("ShaderMaterial_dcx0o"),
+"name": "Window",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAD/P/9//z//f/8//3//P/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dbs3y")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8wobq"]
+data = PackedVector3Array(-2.3049998, -2.3049998, 2.3049998, -2.3049998, 2.3049998, -2.3049998, -2.3049998, -2.3049998, -2.3049998, -2.3049998, -2.3049998, 2.3049998, -2.3049998, 2.3049998, 2.3049998, -2.3049998, 2.3049998, -2.3049998, 2.3044999, -2.3049998, -2.3049998, 7.0662, 2.3049998, -2.3049998, 7.0662, -2.3049998, -2.3049998, 2.3044999, -2.3049998, -2.3049998, 2.3044999, 2.3049998, -2.3049998, 7.0662, 2.3049998, -2.3049998, 7.0662, 1.8123, -1.2049, 7.1972, 1.8123, 1.2048, 7.1972, 1.8123, -1.2049, 7.0662, 1.8123, -1.2049, 7.0662, 1.8123, 1.2048, 7.1972, 1.8123, 1.2048, 7.0662, 1.8123, -1.2049, 7.0662, -2.3049998, -2.3049998, 7.0662, 2.3049998, -2.3049998, 7.0662, 1.8123, -1.2049, 7.0662, -0.5973, -1.2049, 7.0662, -2.3049998, -2.3049998, 7.0662, 1.8123, 1.2048, 7.0662, 1.8123, -1.2049, 7.0662, 2.3049998, -2.3049998, 7.0662, -0.5973, -1.2049, 7.0662, -2.3049998, 2.3049998, 7.0662, -2.3049998, -2.3049998, 7.0662, 1.8123, 1.2048, 7.0662, 2.3049998, -2.3049998, 7.0662, 2.3049998, 2.3049998, 7.0662, -0.5973, -1.2049, 7.0662, -0.5973, 1.2048, 7.0662, -2.3049998, 2.3049998, 7.0662, -0.5973, 1.2048, 7.0662, 1.8123, 1.2048, 7.0662, 2.3049998, 2.3049998, 7.0662, -0.5973, 1.2048, 7.0662, 2.3049998, 2.3049998, 7.0662, -2.3049998, 2.3049998, 7.0662, -0.5973, -1.2049, 7.1972, 1.8123, -1.2049, 7.1972, -0.5973, -1.2049, 7.0662, -0.5973, -1.2049, 7.0662, 1.8123, -1.2049, 7.1972, 1.8123, -1.2049, 7.0662, 1.8123, 1.2048, 7.1972, -0.5973, 1.2048, 7.1972, 1.8123, 1.2048, 7.0662, 1.8123, 1.2048, 7.0662, -0.5973, 1.2048, 7.1972, -0.5973, 1.2048, 7.0662, -0.5973, 1.2048, 7.1972, -0.5973, -1.2049, 7.1972, -0.5973, 1.2048, 7.0662, -0.5973, 1.2048, 7.0662, -0.5973, -1.2049, 7.1972, -0.5973, -1.2049, 7.0662, -2.3049998, 2.3049998, 2.3044999, 2.3049998, 2.3049998, 2.3044999, -2.3049998, 2.3049998, 7.0662, -2.3049998, 2.3049998, 7.0662, 2.3049998, 2.3049998, 2.3044999, 2.3049998, 2.3049998, 2.3044999, -2.3049998, -2.3049998, 7.0663, -2.3049998, 2.3049998, 2.3044999, -2.3049998, 2.3049998, 2.3044999, -2.3049998, -2.3049998, 7.0663, -2.3049998, -2.3049998, 7.0663, -2.3049998, 2.3049998, -2.3049998, -2.3049998, -2.3049998, 2.3044999, -2.3049998, -2.3049998, 2.3044999, -2.3049998, 2.3049998, -2.3049998, -2.3049998, -2.3049998, 2.3044999, -2.3049998, 2.3049998, -2.3049998, -2.3049998, 2.3049998, 2.3044999, 2.3049998, -2.3049998, -2.3049998, 2.3049998, 2.3049998, 2.3044999, 2.3049998, 2.3049998, 2.3044999, 2.3049998, -2.3049998, -2.3049998, 2.3049998, -2.3049998, -2.3049998, 2.3049998, 2.3049998, 7.0663, 2.3049998, -2.3049998, 2.3044999, 2.3049998, 2.3049998, 7.0663, 2.3049998, 2.3049998, 7.0663, 2.3049998, -2.3049998, 2.3044999, 2.3049998, -2.3049998, 2.3044999, 2.3049998, 2.3049998, 7.1972, -0.5973, -1.2048, 7.1972, 1.8123, 1.2048, 7.1972, -0.5973, 1.2048, 7.1972, -0.5973, -1.2048, 7.1972, 1.8123, -1.2048, 7.1972, 1.8123, 1.2048)
+
+[node name="GenericRoom" type="StaticBody3D"]
+script = ExtResource("1_xtb5k")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_8wobq")
+
+[node name="Cube_002" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+mesh = SubResource("ArrayMesh_1i31o")
+skeleton = NodePath("")
+
+[node name="ClosetSpawns" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="closetspawn" type="Marker3D" parent="NavigationRegion3D/ClosetSpawns"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5999515, 0, 1.1474514)
+
+[node name="closetspawn3" type="Marker3D" parent="NavigationRegion3D/ClosetSpawns"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.749942, 4.7683716e-07, -1.5900903)
+
+[node name="closetspawn4" type="Marker3D" parent="NavigationRegion3D/ClosetSpawns"]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 2.749942, 4.7683716e-07, 1.5442147)
+
+[node name="closetspawn2" type="Marker3D" parent="NavigationRegion3D/ClosetSpawns"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5999515, 0, -1.1264634)
+
+[node name="SofaWithTableSpawns" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="sofatablespawn" type="Marker3D" parent="NavigationRegion3D/SofaWithTableSpawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5620475, 0.6445718, 0.023611307)
+
+[node name="sofatablespawn2" type="Marker3D" parent="NavigationRegion3D/SofaWithTableSpawns"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.5620475, 0.6445718, 0.023611307)
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7006726, 0, 2.30597)
+height = 4.65
+vertices = PackedVector3Array(-2.4034069, 0, -0.0153980255, -2.4038448, 0, 0.033849955, 2.3677702, 0, 0.017472982, 2.3683481, 0, -0.027942657)
+
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7006726, 0, -2.3010683)
+height = 4.65
+vertices = PackedVector3Array(-2.4034069, 0, -0.0153980255, -2.4038448, 0, 0.033849955, 2.3677702, 0, 0.017472982, 2.3683481, 0, -0.027942657)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+shape = SubResource("ConcavePolygonShape3D_8wobq")
+
+[node name="Lamp11" parent="." instance=ExtResource("4_1i31o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2955616, 4.6049995, 0.25373352)
+
+[node name="ClothesSpawns" type="Node3D" parent="."]
+
+[node name="clothesspawn" type="Marker3D" parent="ClothesSpawns"]
+transform = Transform3D(0.62353814, -0.50462496, 0.5971213, 0.6290898, 0.77733266, 0, -0.4641619, 0.3756429, 0.80215096, 3.0717354, 1.197761, 0)
+
+[node name="clothesspawn2" type="Marker3D" parent="ClothesSpawns"]
+transform = Transform3D(0.26819503, -0.21704832, 0.9385955, 0.6290898, 0.77733266, -2.3905962e-08, -0.72960097, 0.5904608, 0.34501967, 4.913303, 1.197761, 0)
+
+[node name="clothesspawn3" type="Marker3D" parent="ClothesSpawns"]
+transform = Transform3D(0.9753102, 0.20020513, -0.09320846, -0.21931972, 0.8286749, -0.51497257, -0.025860697, 0.5227004, 0.8521241, 0.7248273, 1.197761, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3781586, 2.2738419, -0.017715454)
+blend_distance = 0.06
+size = Vector3(9.730255, 4.7128143, 4.681183)
+box_projection = true
+interior = true

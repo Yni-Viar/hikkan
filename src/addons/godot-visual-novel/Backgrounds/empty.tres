@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://cos1yr2xulahb"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bl8mk5r2vrkg4" path="res://addons/godot-visual-novel/Backgrounds/empty.png" id="2_lusom"]
+
+[resource]
+script = ExtResource("2")
+id = "empty"
+display_name = "Empty background"
+texture = ExtResource("2_lusom")

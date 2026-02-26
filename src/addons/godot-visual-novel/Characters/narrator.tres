@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://ds3a2xcg6fq6l"]
+
+[ext_resource type="Script" uid="uid://8vqw6j8aqaek" path="res://addons/godot-visual-novel/Characters/Character.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "narrator"
+display_name = "Narrator"
+bio = ""

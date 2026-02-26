@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://budah57b2gtk4"]
+
+[ext_resource type="Script" uid="uid://bi7l4y6xrjpui" path="res://addons/godot-visual-novel/Main.gd" id="1"]
+
+[node name="VN" type="Node"]
+script = ExtResource("1")

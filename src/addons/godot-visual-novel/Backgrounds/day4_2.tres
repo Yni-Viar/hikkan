@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://bx63755c1xb7m"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="1_rpcpg"]
+[ext_resource type="Texture2D" uid="uid://crgwp5ecghbg8" path="res://addons/godot-visual-novel/Backgrounds/day4_2.png" id="2_rpcpg"]
+
+[resource]
+script = ExtResource("1_rpcpg")
+id = "corridor"
+display_name = "Corridor"
+texture = ExtResource("2_rpcpg")

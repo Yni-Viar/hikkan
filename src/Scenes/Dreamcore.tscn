@@ -1,0 +1,466 @@
+[gd_scene load_steps=17 format=3 uid="uid://brxmoaprdgji0"]
+
+[ext_resource type="Script" uid="uid://cgmyu7yavlsc6" path="res://Scripts/Thirdparty/voxel_world.gd" id="1_nfv1j"]
+[ext_resource type="Environment" uid="uid://caa8r51k21rpu" path="res://Assets/Environment/DefaultEnvironment.tres" id="4_p0dj8"]
+[ext_resource type="PackedScene" uid="uid://4x3much2ckw3" path="res://PlayerScript/PlayerScene.tscn" id="6_66gbl"]
+[ext_resource type="PackedScene" uid="uid://by5c7g15ljuta" path="res://PlayerScript/StaticPlayer.tscn" id="7_ajv6h"]
+[ext_resource type="PackedScene" uid="uid://oox1oebxt01t" path="res://Assets/OriginalAssets/TimeTrain.tscn" id="8_nfv1j"]
+[ext_resource type="Theme" uid="uid://12sd2ksp1xfo" path="res://UITheme.tres" id="8_x2biq"]
+[ext_resource type="Script" uid="uid://brjpfgf5apfso" path="res://Scripts/UI.gd" id="9_8djd7"]
+[ext_resource type="PackedScene" uid="uid://budah57b2gtk4" path="res://addons/godot-visual-novel/Main.tscn" id="10_44xp8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2bpf"]
+
+[sub_resource type="Animation" id="Animation_fgofq"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Choice/Confirm:self_modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Choice/Confirm:self_modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Choice/Confirm:self_modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_3so38"]
+resource_name = "confirm_error"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Choice/Confirm:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.016666668, 0.16666667, 0, 0, 1, -0.25, 0, 0.25, 0, 1, -0.016666668, 0.16666667, 0, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.8, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Choice/Confirm:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.022222225, 0.16666667, 0, 0, 1, -0.25, 0, 0.25, 0, 0, -0.022222225, 0.16666667, 0, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.8, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Choice/Confirm:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.016666668, 0.16666667, 0, 0, 1, -0.25, 0, 0.25, 0, 0, -0.016666668, 0.16666667, 0, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.8, 1)
+}
+
+[sub_resource type="Animation" id="Animation_2irst"]
+resource_name = "transition"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"_toggle_mouse_filter"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dahhg"]
+resource_name = "transition_action_2"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.16666667, 0, 0, 0, 1, -0.16111112, 0, 0, 0, 0, -0.16111112, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 1, 4, 5)
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Action")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [],
+"method": &"hide"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"_toggle_mouse_filter"
+}, {
+"args": [false],
+"method": &"_toggle_mouse_filter"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_71axn"]
+resource_name = "transition_choice"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Choice")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_bf53h"]
+resource_name = "transition_ending"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AfterEnd")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [true],
+"method": &"_toggle_mouse_filter"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bf53h"]
+_data = {
+&"RESET": SubResource("Animation_fgofq"),
+&"confirm_error": SubResource("Animation_3so38"),
+&"transition": SubResource("Animation_2irst"),
+&"transition_action": SubResource("Animation_dahhg"),
+&"transition_choice": SubResource("Animation_71axn"),
+&"transition_ending": SubResource("Animation_bf53h")
+}
+
+[node name="Game" type="Node3D"]
+
+[node name="DreamCore" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_nfv1j")
+player = NodePath("../Player")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("4_p0dj8")
+
+[node name="Player" parent="." instance=ExtResource("6_66gbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0642928, 0, -0.004643202)
+character_speed = 5.0
+is_player = true
+
+[node name="StaticPlayer" parent="." instance=ExtResource("7_ajv6h")]
+target_puppet_path = "/root/Game/Player"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_x2biq")
+script = ExtResource("9_8djd7")
+
+[node name="PlayingArea" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.44400004
+anchor_right = 0.5
+anchor_bottom = 0.44400004
+offset_left = -512.0
+offset_top = -287.71204
+offset_right = 512.0
+offset_bottom = 288.28796
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b2bpf")
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="VN" parent="UI" instance=ExtResource("10_44xp8")]
+scripts = Array[String](["res://addons/godot-visual-novel/Parser/day4_se.txt"])
+
+[node name="Day" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.19800001
+anchor_right = 0.5
+anchor_bottom = 0.19800001
+offset_left = -384.0
+offset_top = -320.30402
+offset_right = 384.0
+offset_bottom = -192.30402
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "DAY "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CurrentTime" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 32
+text = "Current Time"
+
+[node name="Action" type="Control" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActionLabel" type="Label" parent="UI/Action"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.49400002
+anchor_right = 0.5
+anchor_bottom = 0.49400002
+offset_left = -200.0
+offset_top = -64.112
+offset_right = 200.0
+offset_bottom = 63.888
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Choice" type="Control" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceLabel" type="Label" parent="UI/Choice"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.24700001
+anchor_right = 0.5
+anchor_bottom = 0.24700001
+offset_left = -320.0
+offset_top = -32.056
+offset_right = 320.0
+offset_bottom = 31.944
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hour" type="LineEdit" parent="UI/Choice"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.49400002
+anchor_right = 0.5
+anchor_bottom = 0.49400002
+offset_left = -128.0
+offset_top = -64.112
+offset_right = 128.0
+offset_bottom = 63.888
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+placeholder_text = "Hours"
+alignment = 1
+max_length = 1
+virtual_keyboard_type = 2
+
+[node name="Confirm" type="Button" parent="UI/Choice"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.72800004
+anchor_right = 0.5
+anchor_bottom = 0.72800004
+offset_left = -128.0
+offset_top = -23.744019
+offset_right = 128.0
+offset_bottom = 24.255981
+grow_horizontal = 2
+grow_vertical = 0
+text = "Confirm"
+
+[node name="AfterEnd" type="Control" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="UI/AfterEnd"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.24700001
+anchor_right = 0.5
+anchor_bottom = 0.24700001
+offset_left = -384.0
+offset_top = -32.056
+offset_right = 384.0
+offset_bottom = 31.944
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reason" type="Label" parent="UI/AfterEnd"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.49400002
+anchor_right = 0.5
+anchor_bottom = 0.49400002
+offset_left = -384.0
+offset_top = -64.112
+offset_right = 384.0
+offset_bottom = 63.888
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+libraries = {
+&"": SubResource("AnimationLibrary_bf53h")
+}
+
+[node name="TimeTrain" parent="." instance=ExtResource("8_nfv1j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8979001, 1.0042024, -0.89520025)
+
+[node name="TimeTrain2" parent="." instance=ExtResource("8_nfv1j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8979001, 1.0042024, 17.863832)
+
+[connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
+[connection signal="pressed" from="UI/Choice/Confirm" to="." method="_on_confirm_pressed"]

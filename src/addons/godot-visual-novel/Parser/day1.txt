@@ -1,0 +1,9 @@
+background empty fade_in
+
+"You got up from your bed, and thought, that you need to have a walk"
+"But you are afraid of going out of your home"
+"Not so long ago, you have a talk via PC with your mother about stopping being hikkikomori"
+you "I realised I must go out for a walk!"
+you "I hope I can do this!"
+
+transition fade_out

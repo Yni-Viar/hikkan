@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Background" load_steps=3 format=3 uid="uid://bygg2jarxc825"]
+
+[ext_resource type="Script" uid="uid://bbycr8jlqbpio" path="res://addons/godot-visual-novel/Backgrounds/Background.gd" id="1_gijcm"]
+[ext_resource type="Texture2D" uid="uid://ccq8j3cakjpjt" path="res://addons/godot-visual-novel/Backgrounds/day4_3.png" id="2_gijcm"]
+
+[resource]
+script = ExtResource("1_gijcm")
+id = "corridor_good_ending"
+display_name = "Corridor (good ending version)"
+texture = ExtResource("2_gijcm")
