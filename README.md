@@ -19,6 +19,10 @@ Most of the code (except ./src/Scripts/Thirdparty, which is borrowed from Godot 
 ./src/addons/godot-visual-novel/Backgrounds/*.png is also made by me and licensed under [CC-BY 4.0](./LICENSE.OWN_ASSETS)
 
 ## Changelog
+### v1.0.2 (2026.02.27, hotfix)
+
+- Fixed initial camera position due to wrong camera setup.
+
 ### v1.0.1 (2026.02.26, hotfix)
 
 - Fix Secret ending crashing the game (if ocurred)

@@ -11,7 +11,7 @@ enum CameraMode {ALL, UPPERLOOK, THIRD_PERSON, SIZE}
 			if current_camera_mode != val:
 				preset_toggle_onstart(val)
 		camera_mode = val
-@export var current_camera_mode: CameraMode = CameraMode.UPPERLOOK
+@export var current_camera_mode: CameraMode = CameraMode.THIRD_PERSON
 @export var target_puppet_path: String = ""
 var mouse_sensitivity = 0.03125
 var prev_x_coordinate: float = 0
