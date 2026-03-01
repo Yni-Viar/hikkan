@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Hikkan"
 config/description="The game about hikkikomori, who decides to get out."
-config/version="1.0.2"
+config/version="1.0.3"
 run/main_scene="uid://2t0g6kfccb5n"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Hikkan"

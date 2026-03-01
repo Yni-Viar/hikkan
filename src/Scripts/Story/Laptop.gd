@@ -14,5 +14,5 @@ func interact(player: Node3D):
 	if get_tree().root.get_node("Game").current_day == 2 && !story_day_2_finished:
 		get_tree().root.get_node("Game/StoryController").start_cutscene(1)
 		story_day_2_finished = true
-	else:
+	elif !player.get("movement_freeze"):
 		get_tree().root.get_node("Game").plan_task("Do you want to go online?", "You spent your time sitting online.")

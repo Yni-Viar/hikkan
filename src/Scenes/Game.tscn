@@ -659,6 +659,7 @@ shadow_reverse_cull_face = true
 [connection signal="day_changed" from="." to="StoryController" method="_on_game_day_changed"]
 [connection signal="generated" from="HouseGenerator" to="." method="_on_house_generator_generated"]
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
+[connection signal="finished" from="UI/VN" to="StoryController" method="_on_vn_finished"]
 [connection signal="pressed" from="UI/Choice/Confirm" to="." method="_on_confirm_pressed"]
 [connection signal="pressed" from="UI/BackButton" to="UI" method="_on_back_button_pressed"]
 [connection signal="animation_finished" from="UI/AnimationPlayer" to="UI" method="_on_animation_player_animation_finished"]

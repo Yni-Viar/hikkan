@@ -1,5 +1,7 @@
 extends Node
 
+signal finished
+
 @export var scripts : Array[String]
 
 const SCENE_PLAYER := preload("res://addons/godot-visual-novel/ScenePlayer.tscn")
@@ -55,6 +57,7 @@ func _on_ScenePlayer_scene_finished() -> void:
 	# If the scene that ended is the last scene, we're done playing the game.
 	#if _current_index == SCENES.size() - 1:
 	_scene_player.hide()
+	finished.emit()
 		#return
 	#play_scene(_current_index + 1)
 

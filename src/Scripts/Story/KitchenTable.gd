@@ -14,4 +14,4 @@ func interact(player: Node3D):
 	if player.current_health[0] < 100:
 		# Eat your breakfast
 		get_tree().root.get_node("Game").action("You decided to eat breakfast. " + phrases[get_tree().root.get_node("Game").rng.randi_range(0, phrases.size() - 1)], 0)
-		player.health_manage(20)
+		player.health_manage(100)

@@ -18,6 +18,7 @@ current_health = Array[float]([80.0])
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.1
+path_height_offset = 0.5
 path_search_max_distance = 1.0
 avoidance_enabled = true
 

@@ -31,7 +31,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if $DirectionalLight3D.rotation_degrees.y > -90.0 || hours < 16:
+	if $DirectionalLight3D.rotation_degrees.y > -90.0 || hours < 15:
 		$DirectionalLight3D.rotate_y(-(PI / 180) * delta)
 		# In this game, Sun goes from 9:00 to 15:00
 		# 4.0 is spare time, because one time rotation goes below zero

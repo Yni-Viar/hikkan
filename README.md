@@ -17,17 +17,3 @@ Most of the code (except ./src/Scripts/Thirdparty, which is borrowed from Godot 
 ./src/Assets/\*, except Assets/Materials/AmbientCG/* and Assets/ThirdPartyAssets/* are made by me and are licensed under [CC-BY 4.0](./LICENSE.OWN_ASSETS)
 
 ./src/addons/godot-visual-novel/Backgrounds/*.png is also made by me and licensed under [CC-BY 4.0](./LICENSE.OWN_ASSETS)
-
-## Changelog
-### v1.0.2 (2026.02.27, hotfix)
-
-- Fixed initial camera position due to wrong camera setup.
-
-### v1.0.1 (2026.02.26, hotfix)
-
-- Fix Secret ending crashing the game (if ocurred)
-- Disable Secret Ending for Web.
-- Increase Secret Ending chance to 1/16 (was 1/32).
-
-### v1.0.0 (2026.02.26)
-- Initial release

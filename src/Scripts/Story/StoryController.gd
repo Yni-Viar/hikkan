@@ -54,4 +54,9 @@ func _on_game_day_changed() -> void:
 			Variables.clear()
 
 func start_cutscene(key: int):
+	get_tree().root.get_node("Game/Player").movement_freeze = true
 	get_tree().root.get_node("Game/UI/VN").play_scene(key)
+
+
+func _on_vn_finished() -> void:
+	get_tree().root.get_node("Game/Player").movement_freeze = false
