@@ -1,4 +1,9 @@
 # Hikkan game Changelog
+
+## v1.0.4 (2026.03.05, hotfix)
+
+- Reduce contrast for some VN backgrounds.
+
 ## v1.0.3 (2026.03.01, patch)
 
 - Fixed ability to click while dialogues are processing.
@@ -12,7 +17,7 @@
 
 ## v1.0.1 (2026.02.26, hotfix)
 
-- Fix Secret ending crashing the game (if ocurred)
+- Fix Secret ending crashing the game (if occured)
 - Disable Secret Ending for Web.
 - Increase Secret Ending chance to 1/16 (was 1/32).
 
