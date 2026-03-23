@@ -148,13 +148,13 @@ func _physics_process(delta: float) -> void:
 	
 	var next_position := _nav_agent.get_next_path_position()
 	var offset := next_position - global_position
+	global_position = global_position.move_toward(next_position, delta * character_speed)
 	if stop_check(offset):
 		if puppet_mesh != null:
 			if character_speed > 15:
 				puppet_mesh.state = puppet_mesh.States.RUNNING
 			else:
 				puppet_mesh.state = puppet_mesh.States.WALKING
-		global_position = global_position.move_toward(next_position, delta * character_speed)
 		look_at(global_position + Vector3(offset.x, 0, offset.z), Vector3.UP)
 	elif puppet_mesh != null:
 		puppet_mesh.state = puppet_mesh.States.IDLE

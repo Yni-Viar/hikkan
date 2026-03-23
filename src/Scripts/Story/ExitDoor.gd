@@ -18,6 +18,7 @@ func interact(player: Node3D):
 				get_tree().root.get_node("Game/StoryController").start_cutscene(2)
 				get_parent().get_parent().get_node("Blip").hide()
 				get_parent().get_parent().get_node("Blip").play("default")
+				knock_opened = true
 		4:
 			if !day_4_go_out:
 				if get_tree().root.get_node("Game").rng.randi_range(0, 16) == 13 && OS.get_name() != "Web":

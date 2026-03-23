@@ -1,5 +1,10 @@
 # Hikkan game Changelog
 
+## v1.0.6 (Emergency fix, 2026.03.23)
+
+- Tried to fix possible situations, when player cannmot move (ported from SCP: Continued Procedures 6.0.3)
+- Fixed possibility to repeat Day 3 quest again and again.
+
 ## v1.0.5 (2026.03.23)
 
 - Used better function for walking detection (ported from SCP: Continued Procedures 6.0)
