@@ -1,5 +1,11 @@
 # Hikkan game Changelog
 
+## v1.0.5 (2026.03.23)
+
+- Used better function for walking detection (ported from SCP: Continued Procedures 6.0)
+- Connected NavMeshes after generating them - improved walking between rooms.
+- \[Android\] Added background icon.
+
 ## v1.0.4 (2026.03.05, hotfix)
 
 - Reduce contrast for some VN backgrounds.

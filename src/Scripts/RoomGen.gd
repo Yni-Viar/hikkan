@@ -23,13 +23,19 @@ func _ready() -> void:
 				var clutter_s_t: Node3D = load("res://Assets/ThirdPartyAssets/dresser_1.tscn").instantiate()
 				get_tree().get_nodes_in_group("SofaSpawn")[i].add_child(clutter_s_t)
 	
-	$NavigationRegion3D.bake_navigation_mesh()
-	
 	if get_tree().get_node_count_in_group("LaptopSpawn") > 0:
 		for i in range(get_tree().get_node_count_in_group("LaptopSpawn")):
 			if i % 2 == 0:
 				var laptop: Node3D = load("res://Assets/ThirdPartyAssets/Laptop.tscn").instantiate()
 				get_tree().get_nodes_in_group("LaptopSpawn")[i].add_child(laptop)
+	
+	$NavigationRegion3D.bake_navigation_mesh()
+	
+# BEGIN code from Godot Docs
+	# 3D margins are designed to work with 3D world unit values.
+	var default_map_rid: RID = get_world_3d().get_navigation_map()
+	NavigationServer3D.map_set_edge_connection_margin(default_map_rid, 1.675)
+# END code from Godot Docs
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

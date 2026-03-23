@@ -4,11 +4,16 @@ The game about hikkikomori, who decides to get out.
 
 Could you overwhelm your fear?
 
-Made in Godot (4.5.2-rc)
+Made in Godot 4.5.2.
 
 ![Screenshot1](./promo/screen1.png)
 ![Screenshot2](./promo/screen2.png)
 ![Screenshot3](./promo/screen3.png)
+
+## Note to Google Android users:
+Please, check [tutorial to install apps without Google verification (effective since Sep 2026)](https://android-developers.googleblog.com/2026/03/android-developer-verification.html), since I don't plan to give all data and pay a fee to Google.
+
+We **do not** distribute dangerous things in this app!
 
 ## License
 

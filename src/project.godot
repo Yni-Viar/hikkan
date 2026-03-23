@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Hikkan"
 config/description="The game about hikkikomori, who decides to get out."
-config/version="1.0.4"
+config/version="1.0.5"
 run/main_scene="uid://2t0g6kfccb5n"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Hikkan"
@@ -86,6 +86,7 @@ vn_continue={
 [navigation]
 
 3d/default_link_connection_radius=1.675
+2d/default_edge_connection_margin=1.675
 
 [physics]
 

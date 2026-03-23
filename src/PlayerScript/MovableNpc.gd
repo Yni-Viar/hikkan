@@ -148,7 +148,7 @@ func _physics_process(delta: float) -> void:
 	
 	var next_position := _nav_agent.get_next_path_position()
 	var offset := next_position - global_position
-	if !offset.is_equal_approx(prev_offset[1]) && !offset.is_equal_approx(prev_offset[0]):
+	if stop_check(offset):
 		if puppet_mesh != null:
 			if character_speed > 15:
 				puppet_mesh.state = puppet_mesh.States.RUNNING
@@ -158,9 +158,20 @@ func _physics_process(delta: float) -> void:
 		look_at(global_position + Vector3(offset.x, 0, offset.z), Vector3.UP)
 	elif puppet_mesh != null:
 		puppet_mesh.state = puppet_mesh.States.IDLE
-	
+	move_and_slide()
 	prev_offset[1] = prev_offset[0]
 	prev_offset[0] = offset
+
+## (Almost) precise check - is player actually moved
+func stop_check(offset: Vector3) -> bool:
+	var check: Vector3 = Vector3.ZERO
+	for prev in prev_offset:
+		check += prev
+	check /= prev_offset.size()
+	if offset.distance_squared_to(check) < 0.001:
+		return false
+	else:
+		return true
 
 func set_target_position(target_position: Vector3, hold: bool = false) -> void:
 	if movement_freeze:
