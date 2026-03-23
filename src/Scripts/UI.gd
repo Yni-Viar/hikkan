@@ -33,28 +33,18 @@ func _on_playing_area_gui_input(event: InputEvent) -> void:
 			# One finger => For rotating around X and Y.
 			# Accept one more press, unpress or drag.
 			if event is InputEventScreenTouch:
-				if event.pressed:
-					# One more finger started touching.
-
-					# Reset the base state to the only current and the new fingers.
-					var temp: Array = [input_amount.keys()[0], input_amount.values()[0]]
-					input_amount = {
-						temp[0]: temp[1],
-						event.index: event.position
-					}
-				else:
-					if input_amount.has(event.index):
-						# Only touching finger released.
+				if input_amount.has(event.index):
+					# Only touching finger released.
 # END https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
-						if dragged:
-							dragged = false
-						else:
-							get_tree().root.get_node("Game/StaticPlayer").interact("Point")
+					if dragged:
+						dragged = false
+					else:
+						get_tree().root.get_node("Game/StaticPlayer").interact("Point")
 # BEGIN https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
 # Copyright (c) 2014-present Godot Engine contributors.
 # Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
 # Licensed under MIT license
-						input_amount.clear()
+					input_amount.clear()
 
 			elif event is InputEventScreenDrag:
 				if input_amount.has(event.index):
