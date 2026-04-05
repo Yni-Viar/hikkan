@@ -23,6 +23,12 @@ func _ready() -> void:
 	
 	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
 	$WorldEnvironment.environment.ssao_enabled = Settings.setting_res.ssao
+	$WorldEnvironment.environment.tonemap_mode = Settings.setting_res.tonemapper
+	if Settings.setting_res.tonemapper != Environment.TONE_MAPPER_LINEAR || \
+	 Settings.setting_res.tonemapper != Environment.TONE_MAPPER_AGX:
+		$WorldEnvironment.environment.tonemap_white = 2.0
+	else:
+		$WorldEnvironment.environment.tonemap_white = 1.0
 	
 	$HouseGenerator.rng = rng
 	$HouseGenerator.size = rng.randi_range(2, 3)

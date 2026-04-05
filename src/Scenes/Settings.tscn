@@ -48,6 +48,36 @@ visible = false
 layout_mode = 2
 text = "SSAO"
 
+[node name="Tonemapper" type="OptionButton" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+selected = 0
+item_count = 5
+popup/item_0/text = "Linear tonemapper"
+popup/item_0/id = 0
+popup/item_1/text = "Reinhardt tonemapper"
+popup/item_1/id = 1
+popup/item_2/text = "Filmic tonemapper"
+popup/item_2/id = 2
+popup/item_3/text = "ACES tonemapper"
+popup/item_3/id = 3
+popup/item_4/text = "AGX tonemapper"
+popup/item_4/id = 4
+
+[node name="FoldableContainer2" type="FoldableContainer" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+folded = true
+title = "[i] Tonemapper information"
+
+[node name="Label2" type="Label" parent="ScrollContainer/SettingsUI/FoldableContainer2"]
+visible = false
+layout_mode = 2
+text = "Tonemappers change game appearance.
+Linear does no postprocessing and is fastest to use.
+Reinhardt tonemapper is slower, than linear one.
+Filmic tonemapper is slower, than Reinhardt one.
+ACES tonemapper is slower, than Filmic one.
+AGX tonemapper is relatively new, and is the slowest one."
+
 [node name="SoundsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 visible = false
 layout_mode = 2
@@ -150,6 +180,7 @@ layout_mode = 2
 [connection signal="toggled" from="ScrollContainer/SettingsUI/Glow" to="ScrollContainer/SettingsUI" method="_on_glow_toggled"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/BasicReflection" to="ScrollContainer/SettingsUI" method="_on_basic_reflection_toggled"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/SSAO" to="ScrollContainer/SettingsUI" method="_on_ssao_toggled"]
+[connection signal="item_selected" from="ScrollContainer/SettingsUI/Tonemapper" to="ScrollContainer/SettingsUI" method="_on_tonemapper_item_selected"]
 [connection signal="drag_ended" from="ScrollContainer/SettingsUI/Music/MusicVolume" to="ScrollContainer/SettingsUI" method="_on_music_volume_drag_ended"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CLButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_cl_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_c_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://i0fu80mpsbo4"]
+[gd_scene load_steps=7 format=4 uid="uid://i0fu80mpsbo4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0s47"]
 resource_name = "White"
@@ -69,7 +69,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l02kq")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2qtp"]
-size = Vector3(2.4887238, 1.280679, 1.3055601)
+size = Vector3(2.4887238, 0.11104262, 1.3055601)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7fxn"]
+size = Vector3(0.11876297, 1.3216345, 0.12360525)
 
 [node name="Table" type="StaticBody3D"]
 
@@ -79,5 +82,21 @@ mesh = SubResource("ArrayMesh_uv8lb")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0058670044, 0.018128872, 0.009562969)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0058670044, 0.60294706, 0.009562969)
 shape = SubResource("BoxShape3D_u2qtp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1921864, -0.0023489594, 0.6005404)
+shape = SubResource("BoxShape3D_o7fxn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1955876, -0.0023489594, 0.6005404)
+shape = SubResource("BoxShape3D_o7fxn")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1955876, -0.0023489594, -0.5851128)
+shape = SubResource("BoxShape3D_o7fxn")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2004204, -0.0023489594, -0.5851128)
+shape = SubResource("BoxShape3D_o7fxn")

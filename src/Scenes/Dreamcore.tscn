@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://brxmoaprdgji0"]
+[gd_scene load_steps=24 format=4 uid="uid://brxmoaprdgji0"]
 
 [ext_resource type="Script" uid="uid://cgmyu7yavlsc6" path="res://Scripts/Thirdparty/voxel_world.gd" id="1_nfv1j"]
 [ext_resource type="Script" uid="uid://c4ewaaqybj0w8" path="res://Scripts/DreamCore.gd" id="1_pl4yu"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://brjpfgf5apfso" path="res://Scripts/UI.gd" id="9_8djd7"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="9_n7ssq"]
 [ext_resource type="PackedScene" uid="uid://budah57b2gtk4" path="res://addons/godot-visual-novel/Main.tscn" id="10_44xp8"]
+[ext_resource type="Texture2D" uid="uid://c2uhjnidgrqo3" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_base.png" id="11_p0dj8"]
+[ext_resource type="Texture2D" uid="uid://bswtanqspswa3" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_nor.png" id="12_gveq6"]
+[ext_resource type="Texture2D" uid="uid://c3o6t8wjujow5" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_rough.png" id="13_66gbl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2bpf"]
 
@@ -157,6 +160,47 @@ _data = {
 &"transition_action": SubResource("Animation_dahhg"),
 &"transition_ending": SubResource("Animation_bf53h")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqrd1"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("11_p0dj8")
+roughness_texture = ExtResource("13_66gbl")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("12_gveq6")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ajv6h"]
+_surfaces = [{
+"aabb": AABB(-1, -1.5, -0.25, 2, 3, 0.5),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAwAEAAEAAgAFAAAAAwAAAAUAAgAEAAYABwACAAYABwAGAAQABQACAAcABwAEAAgABAAJAAgABwAIAAkABAADAAkABQAHAAoABwAJAAoACQAFAAoACQALAAUAAwAFAAsACQADAAsA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAP//AAD//1Tl//8AAAAAVOUAAAAA//9U5QAAAAD/1///AAAAAP/X/////wAA/yf/////AAD/J///AAAAAAAAVOX//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nc5kf"]
+resource_name = "Tombstone_InE_Inspiration_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1.5, -0.25, 2, 3, 0.5),
+"attribute_data": PackedByteArray("rhkmZ2oAFgKuGRYCagAmZzbMcs565R24euVyzjbMHbg2zBdYeuUduDbMHbh65RdYUOaU/5T/P+mU/5T/UOY/6Xpl/GdqAMnvagD8Z7BVlP96ZcnvNRCU/1DmOImU/z/pUOY/6ZT/OIk2zHLOeuWU/zbMlP965XLOYMv8Z1Bmye9QZvxnlbuU/2DLye8bdpT/"),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEQAQABMAEwAQABQAEQATABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHwAeACEAIQAeACIAHwAhACMA"),
+"material": SubResource("StandardMaterial3D_bqrd1"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAAAAAVNX//wAA//9U1f//AAAAAFTVAAAAAP//VNX/1///AACq6f//VOX//6rp/9f/////qun//1TlAACq6f//AAAAAP////9U5f///////1TlAAD/////AAD//////yf/////qukAAFTlAACq6f8n//8AAKrpAABU5f//qukAAAAA////////VOX///////8AAP//////J////////wAAVOX//////9f///////8AAAAA/////wAAVOUAAP//AABU5f////8AAAAAAAD////X//8AAFTV/yf/////VNX/J///AABU1f/X/////1TV//8AAAAA//8AAFTlAAD//wAAAAAAAP///9f//wAA/////1TlAAD///8n//8AAP//VFVUVVRVVFVUVVRVVFVUVQS19ZUEtfWVBLX1lQS19ZX/v/9//7//f/+//3//v/9/COoENQjqBDUI6gQ1COoENf9//3//f/9//3//f/9//3//f/9//3//f/8//3//P/9//z//f/8//3+qqqqqqqqqqqqqqqqqqqqq////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ajv6h")
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_pl4yu")
@@ -339,6 +383,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8979001, 1.0042024, -0.895
 
 [node name="TimeTrain2" parent="." instance=ExtResource("8_nfv1j")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8979001, 1.0042024, 17.863832)
+
+[node name="Tombstone_InE_Inspiration" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.5552788, 1.3461103, 47.554996)
+mesh = SubResource("ArrayMesh_nc5kf")
+skeleton = NodePath("")
 
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
 [connection signal="pressed" from="UI/BackButton" to="UI" method="_on_back_button_pressed"]

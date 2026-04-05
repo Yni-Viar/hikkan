@@ -1,5 +1,14 @@
 # Hikkan game Changelog
 
+## v1.1.0 (TBA)
+### Gameplay changes
+- [ ] Add character customization
+
+### Misc changes
+- [x] Added chair.
+- [x] Ported tonemap settings from SCP: Continued Procedures 6.1
+- [x] 🪦🥚
+
 ## v1.0.6 (Emergency fix, 2026.03.23)
 
 - \[Touchscreen / Android\] Fixed long-standing rare issue, when double tapping lead to soft lock.
