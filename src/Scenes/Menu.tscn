@@ -198,6 +198,17 @@ Licensed under CC-BY 4.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label8" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Human models are
+made by Clint Bellanger
+Licensed under CC-BY 3.0
+Edited by Yni.
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label5" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20

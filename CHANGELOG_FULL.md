@@ -1,5 +1,9 @@
 # Hikkan game Changelog
 
+## v1.1.1 (Emergency fix, 2026.04.06)
+
+- Fixed missing copyright!!!
+
 ## v1.1.0 (Feature update, 2026.04.06)
 
 - Added chair.
