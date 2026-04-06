@@ -1,13 +1,10 @@
 # Hikkan game Changelog
 
-## v1.1.0 (TBA)
-### Gameplay changes
-- [ ] Add character customization
+## v1.1.0 (Feature update, 2026.04.06)
 
-### Misc changes
-- [x] Added chair.
-- [x] Ported tonemap settings from SCP: Continued Procedures 6.1
-- [x] 🪦🥚
+- Added chair.
+- Ported tonemap settings from SCP: Continued Procedures 6.1
+- Added new content to secret ending.
 
 ## v1.0.6 (Emergency fix, 2026.03.23)
 

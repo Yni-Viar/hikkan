@@ -1,4 +1,5 @@
 # Hikkan
+⚠️ This game is in maintenance mode (bugfixes and Godot 4.x updates only). No new features will be added.
 ## About
 The game about hikkikomori, who decides to get out.
 

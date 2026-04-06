@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://brxmoaprdgji0"]
+[gd_scene load_steps=25 format=4 uid="uid://brxmoaprdgji0"]
 
 [ext_resource type="Script" uid="uid://cgmyu7yavlsc6" path="res://Scripts/Thirdparty/voxel_world.gd" id="1_nfv1j"]
 [ext_resource type="Script" uid="uid://c4ewaaqybj0w8" path="res://Scripts/DreamCore.gd" id="1_pl4yu"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c2uhjnidgrqo3" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_base.png" id="11_p0dj8"]
 [ext_resource type="Texture2D" uid="uid://bswtanqspswa3" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_nor.png" id="12_gveq6"]
 [ext_resource type="Texture2D" uid="uid://c3o6t8wjujow5" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_rough.png" id="13_66gbl"]
+[ext_resource type="PackedScene" uid="uid://ijd6jhn4cg87" path="res://PlayerScript/PlayerModel/female.tscn" id="14_gveq6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2bpf"]
 
@@ -383,6 +384,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8979001, 1.0042024, -0.895
 
 [node name="TimeTrain2" parent="." instance=ExtResource("8_nfv1j")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8979001, 1.0042024, 17.863832)
+
+[node name="Amy" parent="." instance=ExtResource("14_gveq6")]
+transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071067, -0.086824656, 0.16533574, 9.965067)
 
 [node name="Tombstone_InE_Inspiration" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.5552788, 1.3461103, 47.554996)
