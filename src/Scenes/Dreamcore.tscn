@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://brxmoaprdgji0"]
+[gd_scene format=3 uid="uid://brxmoaprdgji0"]
 
 [ext_resource type="Script" uid="uid://cgmyu7yavlsc6" path="res://Scripts/Thirdparty/voxel_world.gd" id="1_nfv1j"]
 [ext_resource type="Script" uid="uid://c4ewaaqybj0w8" path="res://Scripts/DreamCore.gd" id="1_pl4yu"]
@@ -10,9 +10,7 @@
 [ext_resource type="Script" uid="uid://brjpfgf5apfso" path="res://Scripts/UI.gd" id="9_8djd7"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="9_n7ssq"]
 [ext_resource type="PackedScene" uid="uid://budah57b2gtk4" path="res://addons/godot-visual-novel/Main.tscn" id="10_44xp8"]
-[ext_resource type="Texture2D" uid="uid://c2uhjnidgrqo3" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_base.png" id="11_p0dj8"]
-[ext_resource type="Texture2D" uid="uid://bswtanqspswa3" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_nor.png" id="12_gveq6"]
-[ext_resource type="Texture2D" uid="uid://c3o6t8wjujow5" path="res://Assets/OriginalAssets/Tombstone/Coffin_InE_Inspiration_rough.png" id="13_66gbl"]
+[ext_resource type="PackedScene" uid="uid://ducp5reuwcfdb" path="res://Assets/ThirdPartyAssets/GhostTrain-CCBY/train.tscn" id="12_774r4"]
 [ext_resource type="PackedScene" uid="uid://ijd6jhn4cg87" path="res://PlayerScript/PlayerModel/female.tscn" id="14_gveq6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2bpf"]
@@ -162,66 +160,25 @@ _data = {
 &"transition_ending": SubResource("Animation_bf53h")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqrd1"]
-resource_name = "Material"
-cull_mode = 2
-albedo_texture = ExtResource("11_p0dj8")
-roughness_texture = ExtResource("13_66gbl")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("12_gveq6")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ajv6h"]
-_surfaces = [{
-"aabb": AABB(-1, -1.5, -0.25, 2, 3, 0.5),
-"format": 34896613377,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAwAEAAEAAgAFAAAAAwAAAAUAAgAEAAYABwACAAYABwAGAAQABQACAAcABwAEAAgABAAJAAgABwAIAAkABAADAAkABQAHAAoABwAJAAoACQAFAAoACQALAAUAAwAFAAsACQADAAsA"),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 12,
-"vertex_data": PackedByteArray("AAAAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAP//AAD//1Tl//8AAAAAVOUAAAAA//9U5QAAAAD/1///AAAAAP/X/////wAA/yf/////AAD/J///AAAAAAAAVOX//wAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_nc5kf"]
-resource_name = "Tombstone_InE_Inspiration_Cube"
-_surfaces = [{
-"aabb": AABB(-1, -1.5, -0.25, 2, 3, 0.5),
-"attribute_data": PackedByteArray("rhkmZ2oAFgKuGRYCagAmZzbMcs565R24euVyzjbMHbg2zBdYeuUduDbMHbh65RdYUOaU/5T/P+mU/5T/UOY/6Xpl/GdqAMnvagD8Z7BVlP96ZcnvNRCU/1DmOImU/z/pUOY/6ZT/OIk2zHLOeuWU/zbMlP965XLOYMv8Z1Bmye9QZvxnlbuU/2DLye8bdpT/"),
-"format": 34896613399,
-"index_count": 60,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEQAQABMAEwAQABQAEQATABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHwAeACEAIQAeACIAHwAhACMA"),
-"material": SubResource("StandardMaterial3D_bqrd1"),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 36,
-"vertex_data": PackedByteArray("AAAAAAAAVNX//wAA//9U1f//AAAAAFTVAAAAAP//VNX/1///AACq6f//VOX//6rp/9f/////qun//1TlAACq6f//AAAAAP////9U5f///////1TlAAD/////AAD//////yf/////qukAAFTlAACq6f8n//8AAKrpAABU5f//qukAAAAA////////VOX///////8AAP//////J////////wAAVOX//////9f///////8AAAAA/////wAAVOUAAP//AABU5f////8AAAAAAAD////X//8AAFTV/yf/////VNX/J///AABU1f/X/////1TV//8AAAAA//8AAFTlAAD//wAAAAAAAP///9f//wAA/////1TlAAD///8n//8AAP//VFVUVVRVVFVUVVRVVFVUVQS19ZUEtfWVBLX1lQS19ZX/v/9//7//f/+//3//v/9/COoENQjqBDUI6gQ1COoENf9//3//f/9//3//f/9//3//f/9//3//f/8//3//P/9//z//f/8//3+qqqqqqqqqqqqqqqqqqqqq////f////3////9/////f////3////9/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ajv6h")
-
-[node name="Game" type="Node3D"]
+[node name="Game" type="Node3D" unique_id=1360380270]
 script = ExtResource("1_pl4yu")
 
-[node name="DreamCore" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+[node name="DreamCore" type="Node3D" parent="." unique_id=344228947 node_paths=PackedStringArray("player")]
 script = ExtResource("1_nfv1j")
 player = NodePath("../Player")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1183960341]
 environment = ExtResource("4_p0dj8")
 
-[node name="Player" parent="." instance=ExtResource("6_66gbl")]
+[node name="Player" parent="." unique_id=406237752 instance=ExtResource("6_66gbl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0642928, 0, -0.004643202)
 character_speed = 5.0
 is_player = true
 
-[node name="StaticPlayer" parent="." instance=ExtResource("7_ajv6h")]
+[node name="StaticPlayer" parent="." unique_id=1073807268 instance=ExtResource("7_ajv6h")]
 target_puppet_path = "/root/Game/Player"
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="." unique_id=401093637]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -231,7 +188,7 @@ grow_vertical = 2
 theme = ExtResource("8_x2biq")
 script = ExtResource("9_8djd7")
 
-[node name="PlayingArea" type="Panel" parent="UI"]
+[node name="PlayingArea" type="Panel" parent="UI" unique_id=1234478707]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -246,7 +203,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_b2bpf")
 
-[node name="ColorRect" type="ColorRect" parent="UI"]
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=1154234338]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -256,10 +213,10 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
-[node name="VN" parent="UI" instance=ExtResource("10_44xp8")]
+[node name="VN" parent="UI" unique_id=1544344279 instance=ExtResource("10_44xp8")]
 scripts = Array[String](["res://addons/godot-visual-novel/Parser/day4_se.txt"])
 
-[node name="Day" type="Label" parent="UI"]
+[node name="Day" type="Label" parent="UI" unique_id=1125646239]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -276,14 +233,14 @@ text = "DAY "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CurrentTime" type="Label" parent="UI"]
+[node name="CurrentTime" type="Label" parent="UI" unique_id=209436475]
 layout_mode = 0
 offset_right = 512.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 32
 text = "Current Time"
 
-[node name="Action" type="Control" parent="UI"]
+[node name="Action" type="Control" parent="UI" unique_id=2002364700]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -292,7 +249,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ActionLabel" type="Label" parent="UI/Action"]
+[node name="ActionLabel" type="Label" parent="UI/Action" unique_id=159262181]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -306,7 +263,7 @@ offset_bottom = 63.888
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AfterEnd" type="Control" parent="UI"]
+[node name="AfterEnd" type="Control" parent="UI" unique_id=1065526141]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -315,7 +272,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="UI/AfterEnd"]
+[node name="Title" type="Label" parent="UI/AfterEnd" unique_id=2039354841]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -331,7 +288,7 @@ grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Reason" type="Label" parent="UI/AfterEnd"]
+[node name="Reason" type="Label" parent="UI/AfterEnd" unique_id=100591924]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -345,12 +302,10 @@ offset_bottom = 63.888
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
-libraries = {
-&"": SubResource("AnimationLibrary_bf53h")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI" unique_id=1251177296]
+libraries/ = SubResource("AnimationLibrary_bf53h")
 
-[node name="BackButton" type="TextureButton" parent="UI"]
+[node name="BackButton" type="TextureButton" parent="UI" unique_id=944300472]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -360,7 +315,7 @@ offset_right = 64.0
 grow_vertical = 0
 texture_normal = ExtResource("9_n7ssq")
 
-[node name="Label" type="Label" parent="UI"]
+[node name="Label" type="Label" parent="UI" unique_id=1345940431]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -379,19 +334,17 @@ Please, click Back button to exit. You can do nothing here."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TimeTrain" parent="." instance=ExtResource("8_nfv1j")]
+[node name="TimeTrain" parent="." unique_id=112828490 instance=ExtResource("8_nfv1j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8979001, 1.0042024, -0.89520025)
 
-[node name="TimeTrain2" parent="." instance=ExtResource("8_nfv1j")]
+[node name="TimeTrain2" parent="." unique_id=1349369036 instance=ExtResource("8_nfv1j")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8979001, 1.0042024, 17.863832)
 
-[node name="Amy" parent="." instance=ExtResource("14_gveq6")]
+[node name="Amy" parent="." unique_id=331974779 instance=ExtResource("14_gveq6")]
 transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071067, -0.086824656, 0.16533574, 9.965067)
 
-[node name="Tombstone_InE_Inspiration" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.5552788, 1.3461103, 47.554996)
-mesh = SubResource("ArrayMesh_nc5kf")
-skeleton = NodePath("")
+[node name="ghost" parent="." unique_id=1167579533 instance=ExtResource("12_774r4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1841052, -4.707014, 133.20984)
 
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
 [connection signal="pressed" from="UI/BackButton" to="UI" method="_on_back_button_pressed"]

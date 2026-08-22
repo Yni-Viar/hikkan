@@ -21,10 +21,6 @@ func _on_play_pressed() -> void:
 	play()
 
 
-func _on_credits_pressed() -> void:
-	$CreditsContainer.visible = true
-
-
 func play():
 	Settings.loader("res://Scenes/Game.tscn", {
 		"map_seed": hash($Seed.text) if !$Seed.text.is_empty() else -1,
@@ -46,3 +42,11 @@ func _on_settings_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	$CreditsContainer.visible = false
+
+
+func _on_credits_button_pressed() -> void:
+	$CreditsContainer.visible = true
+
+
+func _on_support_developer_button_pressed() -> void:
+	OS.shell_open("https://boosty.to/yniviar")

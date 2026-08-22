@@ -1,0 +1,11 @@
+Model Information:
+* title:	Subway railcar EZH-3
+* source:	https://sketchfab.com/3d-models/subway-railcar-ezh-3-4ac2b9e0580b4536a5e503627b9c1b98
+* author:	Randonavt (https://sketchfab.com/Randonavt)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Subway railcar EZH-3" (https://sketchfab.com/3d-models/subway-railcar-ezh-3-4ac2b9e0580b4536a5e503627b9c1b98) by Randonavt (https://sketchfab.com/Randonavt) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

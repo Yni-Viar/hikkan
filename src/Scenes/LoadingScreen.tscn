@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqbhy0ejcfn00"]
+[gd_scene format=3 uid="uid://dqbhy0ejcfn00"]
 
-[ext_resource type="Script" uid="uid://dex6xhe6ie28f" path="res://Scripts/LoadingScreen.gd" id="1_m6rkq"]
 [ext_resource type="FontFile" uid="uid://3ydmlj7unul" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="2_xoop3"]
 
-[node name="LoadingScreen" type="Control"]
+[node name="LoadingScreen" type="Control" unique_id=1852280462]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -11,9 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_m6rkq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1767628166]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1211030856]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -41,7 +39,7 @@ text = "Loading..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=223235085]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -58,7 +56,7 @@ theme_override_font_sizes/font_size = 32
 text = "Please, wait..."
 horizontal_alignment = 1
 
-[node name="LoadProgress" type="ProgressBar" parent="."]
+[node name="LoadProgress" type="ProgressBar" parent="." unique_id=1251692062]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5

@@ -145,11 +145,32 @@ func season_feature_checker(season_check: Season) -> bool:
 		return false
 
 func loader(file_path_to_load: String, parameters: Dictionary[String, Variant]):
-	if get_child_count() > 0:
-		if get_child(0) is LoadingScreen:
-			return
-	var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
-	loading_screen.file_path_to_load = file_path_to_load
-	loading_screen.parameters = parameters
+	#if get_child_count() > 0:
+		#if get_child(0) is LoadingScreen:
+			#return
+	#var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
+	#loading_screen.file_path_to_load = file_path_to_load
+	#loading_screen.parameters = parameters
+	#
+	#add_child(loading_screen)
+	#if get_child_count() > 0:
+		#if get_child(0) is LoadingScreen:
+			#return
+	#var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
+	#loading_screen.file_path_to_load = file_path_to_load
+	#loading_screen.parameters = parameters
+	#
+	#add_child(loading_screen)
 	
+	# Godot bug https://github.com/godotengine/godot/issues/121124
+	# Reverted to single-threaded pre-<SCP: Continued Procedures 5.8.0> load :(
+	var loading_screen: Control = load("res://Scenes/LoadingScreen.tscn").instantiate()
 	add_child(loading_screen)
+	await get_tree().create_timer(0.5).timeout
+	var game: Node = load(file_path_to_load).instantiate()
+	for parameter in parameters:
+		game.set(parameter, parameters[parameter])
+	get_tree().root.add_child(game, true)
+	get_tree().current_scene.queue_free()
+	call_deferred("override_main_scene", game)
+	loading_screen.queue_free()

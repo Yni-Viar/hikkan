@@ -1,9 +1,11 @@
 # Hikkan game Changelog
 
-## v1.1.2 (LTS)
+## v1.1.2 (LTS, 2026.08.22)
 
-- [x] Fixed female Hikkan texture.
-- [x] Updated to Godot 4.5.3.rc.fixed to fix security issues.
+- Fixed female Hikkan texture.
+- Added donation link.
+- Updated to Godot 4.7
+   - Reverted to single-threaded loading due to Godot bug.
 
 ## v1.1.1 (Emergency fix, 2026.04.06)
 

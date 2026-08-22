@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2t0g6kfccb5n"]
+[gd_scene format=3 uid="uid://2t0g6kfccb5n"]
 
 [ext_resource type="Script" uid="uid://sjd4pgt5xg6w" path="res://Scripts/MainMenu.gd" id="1_syfuq"]
 [ext_resource type="FontFile" uid="uid://3ydmlj7unul" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="2_s2c3o"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="4_s2c3o"]
 [ext_resource type="PackedScene" uid="uid://bob8xgabev438" path="res://Scenes/Settings.tscn" id="6_wfhf6"]
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=276522780]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_syfuq")
 
-[node name="ColorRect" type="TextureRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=605043436]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_wfhf6")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1697171856]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -44,7 +44,7 @@ text = "Hikkan"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Seed" type="LineEdit" parent="."]
+[node name="Seed" type="LineEdit" parent="." unique_id=1831354913]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -60,7 +60,7 @@ grow_horizontal = 2
 grow_vertical = 0
 placeholder_text = "Seed"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=820824886]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -74,16 +74,16 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Play" type="TextureButton" parent="HBoxContainer"]
+[node name="Play" type="TextureButton" parent="HBoxContainer" unique_id=1279876365]
 layout_mode = 2
 texture_normal = ExtResource("3_ma218")
 texture_pressed = ExtResource("3_ma218")
 
-[node name="Settings" type="TextureButton" parent="HBoxContainer"]
+[node name="Settings" type="TextureButton" parent="HBoxContainer" unique_id=1995327141]
 layout_mode = 2
 texture_normal = ExtResource("4_idohh")
 
-[node name="LawRegulation" type="TextureRect" parent="."]
+[node name="LawRegulation" type="TextureRect" parent="." unique_id=1921088591]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -95,18 +95,27 @@ offset_top = -200.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="CreditsButton" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=275793423]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -184.0
-offset_bottom = 42.0
+offset_left = -192.0
+offset_bottom = 40.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 20
-text = "CREDITS"
+theme_override_constants/separation = 8
 
-[node name="CreditsContainer" type="Control" parent="."]
+[node name="CreditsButton" type="Button" parent="VBoxContainer" unique_id=1556335146]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Credits"
+
+[node name="SupportDeveloperButton" type="Button" parent="VBoxContainer" unique_id=1763046086]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Support the developer"
+
+[node name="CreditsContainer" type="Control" parent="." unique_id=1893610389]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -115,35 +124,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="CreditsContainer"]
+[node name="ColorRect" type="ColorRect" parent="CreditsContainer" unique_id=1770582503]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5019608)
+color = Color(0, 0, 0, 1)
 
-[node name="BackButton" type="TextureButton" parent="CreditsContainer"]
+[node name="BackButton" type="TextureButton" parent="CreditsContainer" unique_id=1466351737]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 texture_normal = ExtResource("4_s2c3o")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CreditsContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CreditsContainer" unique_id=1097433354]
 layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
+anchors_preset = -1
+anchor_left = 0.11100001
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -320.0
-grow_horizontal = 0
+offset_left = 0.12799072
+grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer/ScrollContainer" unique_id=1779790026]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=1483198713]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Hikkan
@@ -152,14 +161,14 @@ A game made by Yni Viar in 2026"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=47814969]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Licensed under MIT License"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=370207979]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "-----------------------------------------
@@ -168,7 +177,7 @@ Third-party credits
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label6" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label6" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=30139395]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Godot Engine + demo projects
@@ -178,7 +187,7 @@ Licensed under MIT License
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label7" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label7" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=660738521]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Visual Novel system
@@ -188,7 +197,7 @@ Licensed under MIT License
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label4" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=1970700865]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Beetle bot 3D model
@@ -198,7 +207,7 @@ Licensed under CC-BY 4.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label8" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label8" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=132120353]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Human models are
@@ -209,7 +218,7 @@ Edited by Yni.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label5" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer"]
+[node name="Label5" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=548722439]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Coming Soon font
@@ -219,10 +228,22 @@ Apache license 2.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings" parent="." instance=ExtResource("6_wfhf6")]
+[node name="Label9" type="Label" parent="CreditsContainer/ScrollContainer/VBoxContainer" unique_id=798666163]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Subway railcar, made 
+by Randonavt
+(https://sketchfab.com/Randonavt)
+is licensed under CC-BY-4.0
+-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" parent="." unique_id=147674134 instance=ExtResource("6_wfhf6")]
 visible = false
 
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SupportDeveloperButton" to="." method="_on_support_developer_button_pressed"]
 [connection signal="pressed" from="CreditsContainer/BackButton" to="." method="_on_back_button_pressed"]

@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Hikkan"
@@ -16,7 +20,7 @@ config/version="1.1.2"
 run/main_scene="uid://2t0g6kfccb5n"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Hikkan"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/image="uid://bwq036g61f5l4"
 config/icon="uid://nw7c2c72j0cl"
 
@@ -24,8 +28,8 @@ config/icon="uid://nw7c2c72j0cl"
 
 ResourceStorage="*res://Scripts/ResourceStorage.gd"
 Settings="*res://Scripts/Settings.gd"
-ResourceDB="*res://addons/godot-visual-novel/Autoloads/ResourceDB.gd"
-Variables="*res://addons/godot-visual-novel/Autoloads/Variables.gd"
+ResourceDB="*uid://b77pngotdgnqy"
+Variables="*uid://da5hxt8xs3wb1"
 
 [display]
 

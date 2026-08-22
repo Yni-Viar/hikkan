@@ -5,7 +5,9 @@ The game about hikkikomori, who decides to get out.
 
 Could you overwhelm your fear?
 
-Made in Godot 4.5.2.
+Made in Godot 4.7.1.
+
+[💳Support the author financially!](https://boosty.to/yniviar)
 
 ![Screenshot1](./promo/screen1.png)
 ![Screenshot2](./promo/screen2.png)
